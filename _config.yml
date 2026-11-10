@@ -1,0 +1,9 @@
+title: Everyday Homeschooler
+url: https://www.everydayhomeschooler.com
+include: [_pages]
+exclude: [scripts, README.md, Gemfile, Gemfile.lock, vendor]
+plugins:
+  - jekyll-sitemap
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }

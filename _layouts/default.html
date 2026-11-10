@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+  {% if page.description != "" %}<meta name="description" content="{{ page.description | escape }}">{% endif %}
+  {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% include head-styles.html %}
+  {% for c in page.extra_css %}<link rel="stylesheet" href="{{ c }}">{% endfor %}
+  <link rel="stylesheet" href="/assets/site-fixes.css?v=4">
+</head>
+<body id="{{ page.body_id }}" class="{{ page.body_class }}">
+  <div id="siteWrapper" class="clearfix site-wrapper">
+    {% include header.html %}
+    <main id="page" class="container" role="main">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </div>
+  {% include svg-sprite.html %}
+  <script src="/assets/js/site.js?v=5"></script>
+</body>
+</html>

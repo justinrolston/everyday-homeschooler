@@ -1,0 +1,20 @@
+/* Squarespace hid elements until its runtime animated them in. Show them statically. */
+[data-animation-role], .preFade, .preSlide, .preScale, .preClip, .preFlex,
+.blog-item, .summary-item, .list-item, .user-items-list-item-container, .fe-block,
+.sqs-block, .image-block-outer-wrapper, .content-fit, .sqs-gallery-design-grid-slide {
+  opacity: 1 !important;
+  transform: none !important;
+  clip-path: none !important;
+}
+.sqs-image-shape-container-element img, .image-block-wrapper img,
+.fluid-image-container img, .fluid-image-component-root img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+/* Shape blocks: Squarespace sized these SVGs with JS */
+.sqs-shape-block-container, .sqs-block-shape .sqs-block-content { height: 100%; }
+svg.sqs-shape { display: block; width: 100%; height: 100%; overflow: visible; }
+.sqs-shape rect { fill: inherit; }
+.eh-video { position: relative; width: 100%; aspect-ratio: 16 / 9; }
+.eh-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.accordion-item__dropdown--open { height: auto !important; }
+.eh-form-placeholder { padding: 1.5em; border: 1px dashed currentColor; border-radius: 8px; text-align: center; }
